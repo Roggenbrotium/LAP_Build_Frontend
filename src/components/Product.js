@@ -5,7 +5,7 @@ import 'css/Global.css'
 import 'css/ElementDetails.css'
 import getProduct from 'fetch/getProduct';
 import cart from 'assets/shopping_cart.png';
-import getCurrentUser from 'fetch/getCurrentUser';
+import addProduct from 'fetch/addProduct';
 
 class Product extends React.Component {
   constructor(props) {
@@ -29,12 +29,8 @@ class Product extends React.Component {
     })
   }
 
-  moveToUserPage() {
-    this.props.navigate.navigator("/login");
-  }
-
   addToBasket() {
-    getCurrentUser().then(response => {
+    addProduct(this.state.product.id).then(response => {
       console.warn(response);
     }).catch(() => {
       const id = this.state.product.id;
