@@ -1,9 +1,9 @@
-.login {
+.login, .registration {
     display: flex;
     justify-content: center;
 }
 
-.login .main_container {
+.login .main_container, .registration .main_container {
     all: unset;
     width: 320px;
     min-width: 320px;

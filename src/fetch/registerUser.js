@@ -1,13 +1,16 @@
 import apiUrl from 'constants/constants'
 
-function loginUser(email, password) {
+function registerUser(email, password, telephone, billingAddress, deliveryAddress) {
   const body = {
     email: email,
-    password: password
+    password: password,
+    telephone: telephone,
+    billingAddress: billingAddress,
+    deliveryAddress: deliveryAddress
   }
 
   return new Promise((resolve, reject) => {
-    fetch(apiUrl + '/user/login', {
+    fetch(apiUrl + '/user/register', {
       method: "POST",
       headers: {
         Accept: 'application/json',
@@ -18,7 +21,7 @@ function loginUser(email, password) {
     })
     .then(response => {
       if (response.status == 200) {
-        resolve();
+        resolve(response.json());
       } else if (response.status == 403) {
         reject();
       }
@@ -26,4 +29,4 @@ function loginUser(email, password) {
   });
 }
 
-export default loginUser;
+export default registerUser;

@@ -29,7 +29,7 @@ class Login extends React.Component {
   }
 
   moveToRegisterPage() {
-
+    this.props.navigate.navigator("/registration");
   }
 
   handleKeypress(evt) {

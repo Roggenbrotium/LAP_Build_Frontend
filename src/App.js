@@ -6,6 +6,7 @@ import ProductList from 'components/ProductList'
 import Product from 'components/Product';
 import { useParams } from 'react-router-dom';
 import Login from 'components/Login';
+import Registration from 'components/Registration';
 
 class App extends React.Component {
   render () {
@@ -37,6 +38,12 @@ class App extends React.Component {
       return <Login {...{...props, navigate: {navigator} } } />
     }
 
+    const RegistationWrapper = (props) => {
+      //method for navigating to other sites
+      const navigator = useNavigate();
+      return <Registration {...{...props, navigate: {navigator} } } />
+    }
+
 
     return (
       <Routes>
@@ -44,6 +51,7 @@ class App extends React.Component {
         <Route path='products' element={<ProductListWrapper />} />
         <Route path='product/:id' element={<ProductWrapper />} />
         <Route path='login' element={<LoginWrapper />} />
+        <Route path='registration' element={<RegistationWrapper />} />
       </Routes>
     );
   }
