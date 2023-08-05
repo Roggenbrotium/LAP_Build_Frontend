@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    width: auto;
+}
+
+.main_container {
+    min-height: 80%;
+    min-width: 560px;
+    max-width: 80%;
+    margin: 30px auto 30px;
+    border: 2px darkgray solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px gray;
+    overflow:hidden;
+    margin-top: 80px;
+}
+
+.title_text {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 10px;
+    overflow-wrap: break-word;
+}
+
+.description {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    overflow-wrap: break-word;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    overflow-wrap: break-word;
+}
+
+.top_input_container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_field {
+    height: 20px;
+    width: 240px;
+}
+
+.input_text {
+    width: 140px;
+}
+
+.radio_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio_button {
+    margin: 0;
+}
+
+.radio_title {
+    width: 388px;
+    margin: 0px;
+}
+
+.simple_button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 20px;
+}
+
+.default_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

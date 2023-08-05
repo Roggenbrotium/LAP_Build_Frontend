@@ -1,0 +1,37 @@
+.list_element {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px darkgray solid;
+}
+
+.list_element:hover {
+    background-color: lightgrey;
+}
+
+.product_image_container {
+    border-right: 2px darkgray solid;
+    width: 100px;
+}
+
+.list_element .name_container {
+    flex: 2;
+    border-right: 2px darkgray solid;
+}
+
+.list_element .price_container {
+    flex: 1;
+    max-width: 100px;
+    text-align: center;
+}
+
+.list_element .product_image {
+    max-height: 80px;
+    max-width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list_closer {
+    border-bottom: 2px darkgray solid;
+}
