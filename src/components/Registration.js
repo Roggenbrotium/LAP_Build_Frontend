@@ -2,7 +2,7 @@ import React from 'react';
 import 'css/Global.css'
 import 'css/Login.css'
 import registerUser from 'fetch/registerUser';
-import { ErrorCodes } from 'constants/enums';
+import { StatusCode } from 'constants/enums';
 
 class Registration extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class Registration extends React.Component {
     }
 
     registerUser(this.state.email, this.state.password, this.state.telephone, this.state.billingAddress, this.state.deliveryAddress).then((response) => {
-      if (response.statusCode == ErrorCodes.ERROR) {
+      if (response.statusCode == StatusCode.ERROR) {
         this.setState({error: response.message});
         return;
       } else {

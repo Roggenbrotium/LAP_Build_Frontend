@@ -16,7 +16,7 @@ class Navbar extends React.Component {
   moveToUserPage() {
     getCurrentUser().then(() => {
       //TODO navigate to UserDetailsPage
-      this.props.navigate.navigator("/login");
+      this.props.navigate.navigator("/user");
     }).catch(() => {
       this.props.navigate.navigator("/login");
     })
