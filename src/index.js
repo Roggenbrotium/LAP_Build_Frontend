@@ -4,10 +4,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import App from 'App';
+import { Helmet } from 'react-helmet';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <Helmet>
+      <title>My Title</title>
+      <meta name="viewport" content="width=device-width" />
+      <meta charset="UTF-8"/>
+    </Helmet>
     <App />
   </BrowserRouter>
 );

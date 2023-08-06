@@ -2,7 +2,7 @@ import React from 'react';
 import 'css/Global.css'
 import 'css/Login.css'
 import registerUser from 'fetch/registerUser';
-import ErrorCodes from 'constants/enums';
+import { ErrorCodes } from 'constants/enums';
 
 class Registration extends React.Component {
   constructor(props) {

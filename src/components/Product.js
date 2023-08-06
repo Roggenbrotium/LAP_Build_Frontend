@@ -30,9 +30,7 @@ class Product extends React.Component {
   }
 
   addToBasket() {
-    addProduct(this.state.product.id).then(response => {
-      console.warn(response);
-    }).catch(() => {
+    addProduct(this.state.product.id).catch(() => {
       const id = this.state.product.id;
       var currentBasket = window.sessionStorage.getItem("basket");
       if (currentBasket == null) {

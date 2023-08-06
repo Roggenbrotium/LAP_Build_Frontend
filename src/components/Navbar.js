@@ -9,8 +9,8 @@ import getCurrentUser from 'fetch/getCurrentUser';
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    //this.moveToUserPage = this.props.moveToUserPage.bind(this);
     this.moveToUserPage = this.moveToUserPage.bind(this);
+    this.moveToBasketPage = this.moveToBasketPage.bind(this);
   }
 
   moveToUserPage() {
@@ -20,6 +20,10 @@ class Navbar extends React.Component {
     }).catch(() => {
       this.props.navigate.navigator("/login");
     })
+  }
+
+  moveToBasketPage() {
+    this.props.navigate.navigator("/basket");
   }
 
   render () {
@@ -39,7 +43,7 @@ class Navbar extends React.Component {
             <p className='pinpoint_text'>Tab</p>
           </Link>
           <div className='top_basket_container'>
-            <img className='navbar_right_image' src={cart} alt='shopping_basket'/>
+            <img className='navbar_right_image' src={cart} alt='shopping_basket' onClick={this.moveToBasketPage}/>
           </div>
           <div>
             <img className='navbar_right_image' src={profile} alt='profile' onClick={this.moveToUserPage}/>

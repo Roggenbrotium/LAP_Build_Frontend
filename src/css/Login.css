@@ -1,17 +1,16 @@
 .login, .registration {
     display: flex;
     justify-content: center;
+    min-width: 320px;
 }
 
 .login .main_container, .registration .main_container {
-    all: unset;
     width: 320px;
     min-width: 320px;
     border: 2px darkgray solid;
     border-radius: 10px;
     box-shadow: 2px 2px gray;
     overflow:hidden;
-    margin-top: 50px;
 }
 
 .input_text {

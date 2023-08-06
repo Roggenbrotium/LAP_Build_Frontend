@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Main from 'components/Main';
@@ -7,6 +6,7 @@ import Product from 'components/Product';
 import { useParams } from 'react-router-dom';
 import Login from 'components/Login';
 import Registration from 'components/Registration';
+import Basket from 'components/Basket';
 
 class App extends React.Component {
   render () {
@@ -44,6 +44,11 @@ class App extends React.Component {
       return <Registration {...{...props, navigate: {navigator} } } />
     }
 
+    const BasketWrapper = (props) => {
+      //method for navigating to other sites
+      const navigator = useNavigate();
+      return <Basket {...{...props, navigate: {navigator} } } />
+    }
 
     return (
       <Routes>
@@ -52,6 +57,7 @@ class App extends React.Component {
         <Route path='product/:id' element={<ProductWrapper />} />
         <Route path='login' element={<LoginWrapper />} />
         <Route path='registration' element={<RegistationWrapper />} />
+        <Route path='basket' element={<BasketWrapper />} />
       </Routes>
     );
   }
