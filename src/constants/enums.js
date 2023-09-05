@@ -5,6 +5,6 @@ export const StatusCode = {
 }
 
 export const PaymentMethod = {
-	BILL: 0,
-	CREDIT_CARD: 1,
+	BILL: 1,
+	CREDIT_CARD: 2,
 }
