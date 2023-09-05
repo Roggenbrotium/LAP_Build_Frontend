@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Additional Information
 
-### `npm run sslstart`
+### `npm run startssl`
 
 Custom command for cross-site requests. Runs the app in the development mode using SSL/TLS.
 Open https://localhost:3000 to view it in your browser.
